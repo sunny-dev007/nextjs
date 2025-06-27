@@ -4,91 +4,49 @@ import styles from "./page.module.css";
 export default function Home() {
   return (
     <div className={styles.page}>
-      <main className={styles.main}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol>
-          <li>
-            Get started by editing <code>src/app/page.tsx</code>.
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
-
-        <div className={styles.ctas}>
-          <a
-            className={styles.primary}
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className={styles.logo}
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-            className={styles.secondary}
-          >
-            Read our docs
+      <main className={styles.hero}>
+        <div className={styles.heroContent}>
+          <h1 className={styles.title}>Welcome to NextApp</h1>
+          <p className={styles.subtitle}>
+            Build modern web applications with speed, style, and simplicity.
+          </p>
+          <a href="#features" className={styles.ctaButton}>
+            Get Started
           </a>
         </div>
+        <div className={styles.heroImageWrapper}>
+          <Image
+            src="/next.svg"
+            alt="Next.js Logo"
+            width={220}
+            height={60}
+            className={styles.heroImage}
+            priority
+          />
+        </div>
       </main>
+      <section id="features" className={styles.featuresSection}>
+        <h2 className={styles.featuresTitle}>Why NextApp?</h2>
+        <div className={styles.featuresGrid}>
+          <div className={styles.card}>
+            <Image src="/globe.svg" alt="Fast" width={40} height={40} />
+            <h3>Blazing Fast</h3>
+            <p>Experience instant page loads and seamless navigation.</p>
+          </div>
+          <div className={styles.card}>
+            <Image src="/window.svg" alt="Modern UI" width={40} height={40} />
+            <h3>Modern UI</h3>
+            <p>Enjoy a beautiful, responsive, and accessible design out of the box.</p>
+          </div>
+          <div className={styles.card}>
+            <Image src="/file.svg" alt="Easy to Use" width={40} height={40} />
+            <h3>Easy to Use</h3>
+            <p>Developer-friendly tools and documentation to get you started quickly.</p>
+          </div>
+        </div>
+      </section>
       <footer className={styles.footer}>
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
+        <span>© {new Date().getFullYear()} NextApp. All rights reserved.</span>
       </footer>
     </div>
   );
